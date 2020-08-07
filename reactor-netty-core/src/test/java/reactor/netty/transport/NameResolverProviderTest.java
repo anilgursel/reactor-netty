@@ -164,7 +164,7 @@ public class NameResolverProviderTest {
 	public void ndotsBadValues() {
 		assertThatExceptionOfType(IllegalArgumentException.class)
 				.isThrownBy(() -> builder.ndots(-2))
-				.withMessage("ndots must be grater or equal to -1");
+				.withMessage("ndots must be greater or equal to -1");
 	}
 
 	@Test

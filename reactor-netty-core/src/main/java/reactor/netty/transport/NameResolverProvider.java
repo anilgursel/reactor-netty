@@ -159,7 +159,7 @@ public final class NameResolverProvider {
 		NameResolverSpec roundRobinSelection(boolean enable);
 
 		/**
-		 * Performs the communication with the DNS serversSets on the given {@link EventLoopGroup}.
+		 * Performs the communication with the DNS servers on the given {@link EventLoopGroup}.
 		 *
 		 * @param eventLoopGroup the {@link EventLoopGroup}
 		 * @return {@code this}
@@ -167,7 +167,7 @@ public final class NameResolverProvider {
 		NameResolverSpec runOn(EventLoopGroup eventLoopGroup);
 
 		/**
-		 * Performs the communication with the DNS serversSets on a supplied {@link EventLoopGroup}
+		 * Performs the communication with the DNS servers on a supplied {@link EventLoopGroup}
 		 * from the {@link LoopResources} container.
 		 * Will prefer native (epoll/kqueue) implementation if available
 		 * unless the environment property {@code reactor.netty.native} is set to {@code false}.
@@ -178,7 +178,7 @@ public final class NameResolverProvider {
 		NameResolverSpec runOn(LoopResources loopResources);
 
 		/**
-		 * Performs the communication with the DNS serversSets on a supplied {@link EventLoopGroup}
+		 * Performs the communication with the DNS servers on a supplied {@link EventLoopGroup}
 		 * from the {@link LoopResources} container.
 		 *
 		 * @param loopResources the {@link LoopResources}
@@ -527,7 +527,7 @@ public final class NameResolverProvider {
 		@Override
 		public NameResolverSpec ndots(int ndots) {
 			if (ndots < -1) {
-				throw new IllegalArgumentException("ndots must be grater or equal to -1");
+				throw new IllegalArgumentException("ndots must be greater or equal to -1");
 			}
 			this.ndots = ndots;
 			return this;
